@@ -94,7 +94,7 @@ namespace c_oefenopdracht
             */
 
 
-
+            
             //2-5
             Console.Write("Enter an integer: ");
             int input = Convert.ToInt32(Console.ReadLine());
@@ -107,16 +107,16 @@ namespace c_oefenopdracht
             }
 
             //2-8
-            int number, sum = 0, count = 0, evenCount = 0, oddCount = 0;
+            int number8, sum8 = 0, count = 0, evenCount = 0, oddCount = 0;
 
             Console.Write("Give numbers: ");
 
             while ((number = Convert.ToInt32(Console.ReadLine())) != -1)
             {
-                sum += number;
+                sum8 += number8;
                 count++;
 
-                if (number % 2 == 0)
+                if (number8 % 2 == 0)
                 {
                     evenCount++;
                 }
@@ -151,8 +151,12 @@ namespace c_oefenopdracht
                 PrintPhrase();
             }
             //2-11
-            int number = 10;
+            int number11 = 10;
             PrintUntilNumber(number);
+
+            //12
+             int number12 = 10;
+             PrintFromNumberToOne(number);
 
         }
         //2-10
@@ -162,13 +166,21 @@ namespace c_oefenopdracht
         }
 
         //2-11
-        public static void PrintUntilNumber(int number)
+        public static void PrintUntilNumber(int number11)
         {
-            for (int i = 1; i <= number; i++)
+            for (int i = 1; i <= number11; i++)
+            {
+                Console.Write(i + " ");
+            }
+        }
+
+        public static void PrintFromNumberToOne(int number12)
+        {
+            for (int i = number12; i >= 1; i--)
             {
                 Console.Write(i + " ");
             }
         }
     }
-}
+    }
 
