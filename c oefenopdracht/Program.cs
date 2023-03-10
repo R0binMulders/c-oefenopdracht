@@ -142,6 +142,14 @@ namespace c_oefenopdracht
 
             Console.WriteLine("Thx! Bye!");
 
+            //2-9
+            PrintPhrase();
+
+        }
+        //2-9
+        public static void PrintPhrase()
+        {
+            Console.WriteLine("In a hole in the ground there lived a method.");
         }
     }
 
