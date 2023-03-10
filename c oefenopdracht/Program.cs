@@ -163,6 +163,11 @@ namespace c_oefenopdracht
             int denominator = 3;
             Division(numerator, denominator);
 
+            //2-14
+            int beginning = 1;
+            int end = 20;
+            DivisibleByThreeInRange(beginning, end);
+
         }
         //2-10
         public static void PrintPhrase()
@@ -194,6 +199,18 @@ namespace c_oefenopdracht
             double result = (double)numerator / denominator;
             Console.WriteLine("Result: " + result);
         }
-    }
+
+        //2-14
+        public static void DivisibleByThreeInRange(int beginning, int end)
+        {
+            Console.Write("Numbers divisible by 3 in range [" + beginning + ", " + end + "]: ");
+            for (int i = beginning; i <= end; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+        }
     }
 
