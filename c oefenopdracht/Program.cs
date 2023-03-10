@@ -6,6 +6,7 @@ namespace c_oefenopdracht
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Hello, World!");
 
             //opdracht 1-2
@@ -57,7 +58,67 @@ namespace c_oefenopdracht
             Console.WriteLine("On her way to work," + askq3 + "often pondered what being" + askq4 + "meant to them.");
             Console.WriteLine("When you work as a" + askq4 + "you meet interesting people.");
             Console.WriteLine(askq3 + "heir work as" + askq4 + "The end.");
-            
+
+
+
+            //excericse van opdracht 2
+            Console.WriteLine("week 2 --------------------------------------------");
+
+            //opdracht2-1
+            int opdr21first = 4 ;
+            int sum = opdr21first * opdr21first;
+            Console.WriteLine(sum);
+
+            int opdr21second = 5;
+            int sum = opdr21second * opdr21second;
+            Console.WriteLine(sum);
+
+            int opdr21third = 3;
+            int sum = opdr21third * opdr21third;
+            Console.WriteLine(sum);
+
+
+            int opdr22first = 5;
+            int opdr22second = 10;
+            int opdr22firstsum = opdr22first + opdr22second;
+            double squareRoot = Math.Sqrt(opdr22firstsum);
+            Console.WriteLine(squareRoot);
+
+            int number = 42;
+            double squareRoot = Math.Sqrt(number);
+            Console.WriteLine(squareRoot);
+
+            int number = 42;
+            double squareRoot = Math.Sqrt(number);
+            Console.WriteLine(squareRoot);
+            */
+
+
+
+            //2-5
+            Console.Write("Enter an integer: ");
+            int input = Convert.ToInt32(Console.ReadLine());
+
+            int sum = 1;
+            while (sum <= input) 
+            { 
+                Console.WriteLine(sum);
+                sum++;
+            }
+
+            //2-8
+            int number;
+
+            Console.Write("Give numbers: ");
+
+            while ((number = Convert.ToInt32(Console.ReadLine())) != -1)
+            {
+                Console.WriteLine(number);
+            }
+
+            Console.WriteLine("Thx! Bye!");
         }
+
     }
-}
+    }
+
