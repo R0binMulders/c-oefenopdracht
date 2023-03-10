@@ -100,8 +100,8 @@ namespace c_oefenopdracht
             int input = Convert.ToInt32(Console.ReadLine());
 
             int sum = 1;
-            while (sum <= input) 
-            { 
+            while (sum <= input)
+            {
                 Console.WriteLine(sum);
                 sum++;
             }
@@ -150,6 +150,9 @@ namespace c_oefenopdracht
             {
                 PrintPhrase();
             }
+            //2-11
+            int number = 10;
+            PrintUntilNumber(number);
 
         }
         //2-10
@@ -157,5 +160,15 @@ namespace c_oefenopdracht
         {
             Console.WriteLine("In a hole in the ground there lived a method.");
         }
+
+        //2-11
+        public static void PrintUntilNumber(int number)
+        {
+            for (int i = 1; i <= number; i++)
+            {
+                Console.Write(i + " ");
+            }
+        }
     }
+}
 
