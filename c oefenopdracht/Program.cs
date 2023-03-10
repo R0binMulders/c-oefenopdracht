@@ -107,18 +107,41 @@ namespace c_oefenopdracht
             }
 
             //2-8
-            int number;
+            int number, sum = 0, count = 0, evenCount = 0, oddCount = 0;
 
             Console.Write("Give numbers: ");
 
             while ((number = Convert.ToInt32(Console.ReadLine())) != -1)
             {
-                Console.WriteLine(number);
+                sum += number;
+                count++;
+
+                if (number % 2 == 0)
+                {
+                    evenCount++;
+                }
+                else
+                {
+                    oddCount++;
+                }
+            }
+
+            if (count > 0)
+            {
+                double average = (double)sum / count;
+                Console.WriteLine("The sum of the numbers is: " + sum);
+                Console.WriteLine("The count of the numbers is: " + count);
+                Console.WriteLine("The average of the numbers is: " + average);
+                Console.WriteLine("The count of even numbers is: " + evenCount);
+                Console.WriteLine("The count of odd numbers is: " + oddCount);
+            }
+            else
+            {
+                Console.WriteLine("No numbers were entered.");
             }
 
             Console.WriteLine("Thx! Bye!");
-        }
 
-    }
+        }
     }
 
