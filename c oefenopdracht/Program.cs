@@ -143,10 +143,16 @@ namespace c_oefenopdracht
             Console.WriteLine("Thx! Bye!");
 
             //2-9
-            PrintPhrase();
+            Console.Write("Enter the number of times to print the phrase: ");
+            int numberOfTimes = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < numberOfTimes; i++)
+            {
+                PrintPhrase();
+            }
 
         }
-        //2-9
+        //2-10
         public static void PrintPhrase()
         {
             Console.WriteLine("In a hole in the ground there lived a method.");
