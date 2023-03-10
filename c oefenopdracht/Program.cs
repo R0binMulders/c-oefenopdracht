@@ -158,6 +158,11 @@ namespace c_oefenopdracht
              int number12 = 10;
              PrintFromNumberToOne(number);
 
+            //2-13
+            int numerator = 10;
+            int denominator = 3;
+            Division(numerator, denominator);
+
         }
         //2-10
         public static void PrintPhrase()
@@ -174,12 +179,20 @@ namespace c_oefenopdracht
             }
         }
 
+        //2-12
         public static void PrintFromNumberToOne(int number12)
         {
             for (int i = number12; i >= 1; i--)
             {
                 Console.Write(i + " ");
             }
+        }
+
+        //2-13
+        public static void Division(int numerator, int denominator)
+        {
+            double result = (double)numerator / denominator;
+            Console.WriteLine("Result: " + result);
         }
     }
     }
