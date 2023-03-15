@@ -29,6 +29,19 @@ namespace c_oefenopdracht
             }
 
 
+            //3-28
+            string input;
+            do
+            {
+                input = Console.ReadLine();
+                if (!string.IsNullOrEmpty(input))
+                {
+                    string[] parts = input.Split(' ');
+                    Console.WriteLine(parts[parts.Length - 1]);
+                }
+            } while (!string.IsNullOrEmpty(input));
+
+
         }
 
     }
