@@ -79,14 +79,14 @@ namespace c_oefenopdracht
             while (true)
             {
                 Console.Write("Enter a name and age (or press Enter to finish): ");
-                input = Console.ReadLine().Trim();
+                inputopdr30 = Console.ReadLine().Trim();
 
-                if (string.IsNullOrEmpty(input))
+                if (string.IsNullOrEmpty(inputopdr30))
                 {
                     break;
                 }
 
-                nameAge = input.Split(',');
+                nameAge = inputopdr30.Split(',');
 
                 string name = nameAge[0].Trim();
                 int age = int.Parse(nameAge[1].Trim());
