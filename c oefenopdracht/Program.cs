@@ -99,6 +99,44 @@ namespace c_oefenopdracht
             }
 
             Console.WriteLine($"The oldest person is {oldestName}, who is {oldestAge} years old.");
+
+            //3-31
+            List<(string name, int birthYear)> people = new List<(string, int)>();
+
+            // Read names and birth years from the user
+            while (true)
+            {
+                Console.Write("Enter a name and birth year (separated by comma): ");
+                string input31 = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    break;
+                }
+                string[] parts = input31.Split(',');
+                string name = parts[0].Trim();
+                int birthYear = int.Parse(parts[1].Trim());
+                people.Add((name, birthYear));
+            }
+
+            // Find the longest name and highest age
+            string longestName = "";
+            int highestAge = int.MinValue;
+            foreach ((string name, int birthYear) in people)
+            {
+                int age = DateTime.Now.Year - birthYear;
+                if (age > highestAge)
+                {
+                    highestAge = age;
+                }
+                if (name.Length > longestName.Length)
+                {
+                    longestName = name;
+                }
+            }
+
+            // Print the results
+            Console.WriteLine("Longest name: " + longestName);
+            Console.WriteLine("Highest age: " + highestAge);
         }
 
     }
