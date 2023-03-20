@@ -69,6 +69,36 @@ namespace c_oefenopdracht
             Console.WriteLine("The oldest person is {0} years old.", maxAge);
 
 
+
+            //3-30
+            string inputopdr30;
+            string[] nameAge;
+            string oldestName = "";
+            int oldestAge = 0;
+
+            while (true)
+            {
+                Console.Write("Enter a name and age (or press Enter to finish): ");
+                input = Console.ReadLine().Trim();
+
+                if (string.IsNullOrEmpty(input))
+                {
+                    break;
+                }
+
+                nameAge = input.Split(',');
+
+                string name = nameAge[0].Trim();
+                int age = int.Parse(nameAge[1].Trim());
+
+                if (age > oldestAge)
+                {
+                    oldestAge = age;
+                    oldestName = name;
+                }
+            }
+
+            Console.WriteLine($"The oldest person is {oldestName}, who is {oldestAge} years old.");
         }
 
     }
