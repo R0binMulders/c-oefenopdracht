@@ -42,6 +42,33 @@ namespace c_oefenopdracht
             } while (!string.IsNullOrEmpty(input));
 
 
+            //3-29
+            string inputopdr29;
+            Console.WriteLine("enter a int");
+            List<int> ages = new List<int>();
+            do
+            {
+                inputopdr29 = Console.ReadLine();
+                
+                if (!string.IsNullOrEmpty(inputopdr29))
+                {
+                    string[] parts = inputopdr29.Split(',');
+                    string name = parts[0];
+                    int age = int.Parse(parts[1]);
+                    ages.Add(age);
+                }
+            } while (!string.IsNullOrEmpty(inputopdr29));
+            int maxAge = ages[0];
+            foreach (int age in ages)
+            {
+                if (age > maxAge)
+                {
+                    maxAge = age;
+                }
+            }
+            Console.WriteLine("The oldest person is {0} years old.", maxAge);
+
+
         }
 
     }
